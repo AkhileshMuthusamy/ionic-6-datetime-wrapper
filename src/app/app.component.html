@@ -1,12 +1,21 @@
 <ion-app>
   <ion-content>
-    <hello name="{{ name }}"></hello>
-    <p>Start editing to see some magic happen :)</p>
-
-    <ion-datetime
-      presentation="time"
-      hourCycle="h12"
-      minuteValues="0,5,10,15,20,25,30,35,40,45,50,55"
-    ></ion-datetime>
+    <div style="display: flex;">
+      <div style="width: 50px;">
+        AAA
+      </div>
+      <div style="width: 50px;">
+        BBB
+      </div>
+      <div #wrapper style="display: inline-block; background-color: cyan;">
+        <ion-datetime
+        #dt
+        presentation="time"
+        hourCycle="h12"
+        minuteValues="0,5,10,15,20,25,30,35,40,45,50,55"
+        [value]="timeValue"
+        ></ion-datetime>
+      </div>
+    </div>
   </ion-content>
 </ion-app>
